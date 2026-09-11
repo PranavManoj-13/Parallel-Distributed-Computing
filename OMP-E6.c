@@ -5,7 +5,7 @@ int main(void) {
     int x = 5;
     int y = 10;
 
-    #pragma omp parallel for private(y) ordered
+    #pragma omp parallel for ordered private(y) 
     for (int i = 0; i < 8; i++) {
         int threadID = omp_get_thread_num();
 
