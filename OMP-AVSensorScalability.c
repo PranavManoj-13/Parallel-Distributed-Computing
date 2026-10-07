@@ -51,7 +51,7 @@ int main() {
     printf("---------------------------------------------------\n");
     printf("Threads\tTime (s)\tSpeedup\tEfficiency\n");
 
-    for (int p = 1; p <= 16; p++) {
+    for (int p = 1; p <= 16; p *= 2) {
         omp_set_num_threads(p);
         double startTime = omp_get_wtime();
 
